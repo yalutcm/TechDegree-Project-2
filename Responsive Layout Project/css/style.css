@@ -1,0 +1,213 @@
+/*-----------------------------------------------
+   Universal Styles + Fonts
+-----------------------------------------------*/
+*
+{ box-sizing: border-box;
+  max-width: 1200px; }
+/* Fonts for name, links & main titles */
+h1.name, .top-nav a, h2#Portfolio,
+h2#Skills, h2#Contact, strong, .low-nav a, .footUL a
+{ font-family: 'Ubuntu', sans-serif;}
+
+/* Fonts for paragraphs & sub titles */
+body, h3
+{ font-family: 'Raleway', sans-serif;}
+
+/*-----------------------------------------------
+   Enhanced Design for Entire Page
+-----------------------------------------------*/
+/* TOP */
+h1.name a
+{ background-image: conic-gradient(#566573, #273746);
+  color: white;
+  padding: .6rem;
+
+  border-radius: 5px;
+  box-shadow: 4px 6px 5px #cacaca; }
+
+h3
+{ border-radius: 5px;
+  box-shadow: 4px 6px 5px #cacaca;
+  color: #F5B041; }
+
+h2#Portfolio, h2#Skills, h2#Contact
+{ background-image: conic-gradient(#566573, #273746);
+  color: white;
+  padding: .6rem;
+  margin: .8em 0.8em;
+  border-radius: 5px;
+  box-shadow: 4px 6px 5px #cacaca; }
+
+h2#Skills
+{ margin: .8em 2em;}
+
+
+.top-nav a, strong, .footUL a, h3.name a
+{ font-weight: bolder;
+  color: white; }
+
+.top-section, footer
+{ background-color: #566573;
+  box-shadow: 2px 4px 3px #cacaca; }
+
+.folio, .skills-wrap
+{ background-image: conic-gradient(#566573, #273746);
+  box-shadow: 2px 4px 3px #cacaca;}
+
+
+/*-----------------------------------------------
+   Base Styles Mobile First
+-----------------------------------------------*/
+body
+{ line-height: 1.6;
+  text-align: center;
+  background-color: #566573;
+  color: white;}
+img
+{ max-width: 100%; }
+a
+{ text-decoration: none; }
+ul
+{ margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.wrap, .skills-wrap, footer
+{ margin: 0 .6em;
+  padding: 0 .6em; }
+
+/* Top Navigation + About Me Layout */
+.top-nav li
+{ background-image: conic-gradient(#FFBF00, #DE3163);
+  border-radius: 5px;
+  box-shadow: 2px 4px 3px #cacaca;
+  margin: .4em 0.6em;
+  padding: .4em .4em; }
+
+.top-nav
+{ margin: 0 0 1.6em 0;}
+
+img.avi
+{ width: 78%; }
+
+p.intro
+{ padding: 0 1em 1em 1em;
+  color: white;
+  font-weight: 400; }
+
+      /* Contact + Footer Layout */
+/* Using Flex for Sticky Footers */
+body
+{ display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.footUL
+{ display: none; }
+
+.low-nav
+{ display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #DE3163; }
+
+.btt a
+{ color: white; }
+
+
+/*-----------------------------------------------
+   Media Querie - Medium Screens 768px
+-----------------------------------------------*/
+@media (min-width: 768px)
+{
+/* display flex */
+  .folio, .skills-wrap,
+  header#Home,
+  .top-nav, .about-me
+  {display: flex;}
+
+/* Top Navigation + About Me */
+  .top-section
+  { margin: 0 .0em;
+    padding: 0 1em;}
+
+  .low-nav
+  { margin: 0 1em;}
+
+  header#Home
+  { flex-direction: column;
+    align-items: center; }
+
+  img.avi
+  { padding: 0 .4em 2em 0; }
+
+  .about-me
+  { flex-direction: row-reverse;
+    text-align: left;}
+
+  p.intro
+  { padding: 0 1em 0 0.5em;}
+
+/* Portfolio Layout */
+  h2#Portfolio,  h2#Skill
+  { margin: .8em 10em; }
+
+  h2#Contact
+  { margin: .8em 1em; }
+
+  .folio, .skills-wrap
+  { flex-wrap: wrap; }
+
+  .sect
+  { flex: 1;
+    padding: 0 .2em; }
+
+  .col
+  { flex: 1 50%;
+    padding: 0 .4em; }
+/* Contact + Footer Layout */
+  li a
+  { margin-left: 1em; }
+
+  .btt
+  { display: none; }
+
+  .footUL, .low-nav
+  { display: flex;
+    align-items: center; }
+
+  .low-nav
+  { justify-content: space-between; }
+
+  div.cwrap
+  { padding: 0 10em;}
+
+}
+/*-----------------------------------------------
+   Media Querie - Large Screens 1024px
+-----------------------------------------------*/
+@media (min-width: 1024px)
+{
+  h2#Contact
+  {margin: .8em 1em;}
+
+/* Top Navigation + About Me */
+  .top-section
+  { margin: 0 0em;
+    padding: 0 1.6em; }
+
+header#Home
+  { flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline; }
+/* Main Section */
+  .col
+  { flex: 1 33%; }
+
+  .folio
+  { padding: 2em 0; }
+
+/* Contact + Footer  */
+  div.cwrap
+  { padding: 0 18em; }
+
+}
